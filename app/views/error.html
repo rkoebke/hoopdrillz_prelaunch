@@ -1,0 +1,7 @@
+<check if="{{ @SESSION.haserror }}">
+    <true>
+        <div id="errorwindow" class="modal alert-danger">
+            <div class="modal-content">{{ @SESSION.error }}</div>
+        </div>
+    </true>
+</check>

@@ -1,0 +1,37 @@
+<check if="{{ @SESSION.cid }}">
+    <true>
+        <div class="inner-size">
+
+            <include href="{{ 'error.html' }}" />
+
+            <div class="logo-container">
+                <div class="logo-central"></div>
+            </div>
+
+            <h2>{{@admin_add_header_text}}</h2>
+            <hr>
+
+            <form action="{{@BASE}}{{@admin_add_route_register}}" method="post">
+                <div class="form-group row">
+                    <input type="text" name="name" class="form-control" placeholder="{{@admin_add_field_name_placeholder}}">
+                </div>
+                <div class="form-group row">
+                    <input type="text" name="surname" class="form-control" placeholder="{{@admin_add_field_surname_placeholder}}">
+                </div>
+                <div class="form-group row">
+                    <input type="text" name="email" class="form-control" placeholder="{{@admin_add_field_email_placeholder}}">
+                </div>
+                <div class="form-group row">
+                    <input type="password" name="password" class="form-control" placeholder="{{@admin_add_field_pass_placeholder}}">
+                </div>
+                <div class="form-group row">
+                    <input type="password" name="passcheck" class="form-control" placeholder="{{@admin_add_field_passcheck_placeholder}}">
+                </div>
+                <div class="buttons-container">
+                    <button class="btn btn-outline-success fixed-size-button-md" type="submit">{{@admin_add_btn_register}}</button>
+                    <a class="btn btn-outline-danger fixed-size-button-md" href="{{@BASE}}{{@admin_loggedin_route_admin_tools}}">{{@admin_add_btn_return}}</a>
+                </div>
+            </form>
+        </div>
+    </true>
+</check>

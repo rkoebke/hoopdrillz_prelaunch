@@ -1,0 +1,49 @@
+<check if="{{ @SESSION.cid }}">
+    <false>
+
+        <include href="{{ 'error.html' }}" />
+
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
+
+        <div class="header-text">{{@subscribe_heads_up_text}}</div>
+        <hr>
+
+        <form action="{{@BASE}}{{@subscribe_register_route}}" method="post">
+            <div class="form-group row">
+                <input type="text" name="coach_referral" class="form-control" placeholder="{{@subscribe_referral_link}}">
+            </div>
+            <div class="form-group row">
+                <input type="text" name="name" class="form-control" placeholder="{{@subscribe_name}}">
+            </div>
+            <div class="form-group row">
+                <input type="text" name="surname" class="form-control" placeholder="{{@subscribe_surname}}">
+            </div>
+            <div class="form-group row">
+                <input type="text" name="email" class="form-control" placeholder="{{@subscribe_email}}">
+            </div>
+            <div class="form-group row">
+                <input type="password" name="password" class="form-control" placeholder="{{@subscribe_password}}">
+            </div>
+            <div class="form-group row">
+                <input type="password" name="passwordcheck" class="form-control" placeholder="{{@subscribe_confirm_password}}">
+            </div>
+
+            <div class="row">
+                <input class="mini-disclaimer-check" type="checkbox" id="iacceptdisclaimer">
+
+                <p class="mini-disclaimer">{{@subscribe_disclaimer}}</p>
+            </div>
+
+            <div class="buttons-container">
+                <button id="disabledbtn" type="submit" class="btn btn-outline-primary fixed-size-button" disabled>{{@subscribe_submit_button}}</button>
+                <a class="btn btn-outline-danger fixed-size-button" href="{{@BASE}}/">{{@subscribe_return_button}}</a>
+            </div>
+
+        </form>
+
+    </false>
+</check>
+
+

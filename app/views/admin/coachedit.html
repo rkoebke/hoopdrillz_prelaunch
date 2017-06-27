@@ -1,0 +1,55 @@
+<check if="{{ @SESSION.cid }}">
+    <true>
+        <div class="inner-size">
+
+            <include href="{{ 'error.html' }}" />
+
+            <div class="logo-container">
+                <div class="logo-central"></div>
+            </div>
+
+            <h2>{{@admin_coach_edit_header}}</h2>
+            <hr>
+
+            <form action="{{@BASE}}{{@admin_coach_edit_url_save}}" method="post">
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Name</div>
+                    <input type="text" name="name" class="form-control" placeholder="{{@coachdetails.name}}">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Surname</div>
+                    <input type="text" name="surname" class="form-control" placeholder="{{@coachdetails.surname}}">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Email</div>
+                    <input type="text" name="email" class="form-control" placeholder="{{@coachdetails.email}}">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Password</div>
+                    <input type="password" name="password" class="form-control" placeholder="{{@admin_add_field_pass_placeholder}}">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Password check</div>
+                    <input type="password" name="passcheck" class="form-control" placeholder="{{@admin_add_field_passcheck_placeholder}}">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Referral</div>
+                    <input type="text" name="uniqueid" class="form-control" placeholder="{{@appURL}}{{@coachdetails.referral_id}}" readonly>
+                </div>
+
+                <input type="hidden" name="coachid" value="{{@coachdetails.id}}">
+
+                <div class="buttons-container">
+                    <button class="btn btn-outline-success fixed-size-button-md" type="submit">{{@admin_coach_edit_btn_submit}}</button>
+                    <a class="btn btn-outline-danger fixed-size-button-md" href="{{@BASE}}{{@admin_default_route}}">{{@admin_coach_edit_btn_return}}</a>
+                </div>
+            </form>
+
+        </div>
+    </true>
+</check>

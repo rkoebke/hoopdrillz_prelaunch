@@ -1,0 +1,78 @@
+<check if="{{ @SESSION.cid }}">
+    <true>
+        <div class="inner-size">
+
+            <div class="logo-container">
+                <div class="logo-central"></div>
+            </div>
+
+            <h2>{{@admin_loggedin_header_text}}</h2>
+
+            <div class="page-subheader-text">{{@admin_loggedin_welcome_text}}</div>
+            <div class="page-subheader-text">{{@admin.name}}, {{@admin.surname}}</div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    {{@admin_loggedin_created_date}} {{@admin.created}}
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">{{@admin_loggedin_total_admins}}</div>
+                    <div class="admin-info-box">{{@admintotal.mcount}}</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">{{@admin_loggedin_total_enabled_coach}}</div>
+                    <div class="admin-info-box">{{@totalenabledcoaches.mcount}}</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">{{@admin_loggedin_total_disabled_coach}}</div>
+                    <div class="admin-info-box">{{@totaldisabledcoaches.mcount}}</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">{{@admin_loggedin_total_users}}</div>
+                    <div class="admin-info-box">{{@totalusers.mcount}}</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">{{@admin_loggedin_total_followers}}</div>
+                    <div class="admin-info-box">{{@totalfollowers.mcount}}</div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row col-center">
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-primary" href="{{@BASE}}{{@admin_loggedin_route_coach_tools}}">{{@admin_loggedin_btn_coach_tools}}</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-primary" href="{{@BASE}}{{@admin_loggedin_route_admin_tools}}">{{@admin_loggedin_btn_admin_tools}}</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-primary" href="{{@BASE}}{{@admin_loggedin_route_email_tools}}">{{@admin_loggedin_btn_email_tools}}</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-danger" href="{{@BASE}}{{@admin_default_logout}}">{{@admin_loggedin_logout_text}}</a>
+                </div>
+            </div>
+
+        </div>
+    </true>
+</check>

@@ -1,0 +1,225 @@
+@import url("app-error.css");
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 480px) {
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Roboto, Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-size {
+    max-width: 450px;
+    margin: 10px auto;
+}
+
+.logo-container {
+    height: 130px;
+    width: 100%;
+    display: block;
+}
+
+.logo-central {
+    background: url('assets/logo_signup.png') no-repeat center;
+    width: 320px;
+    height: 132px;
+    margin: 0 auto;
+}
+
+.page-subheader-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.admin-info-text {
+    float: left;
+    width: 180px;
+    text-align: left;
+    line-height: 40px;
+    margin:0px;
+}
+
+.admin-info-box {
+    border: 1px solid black;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    float: right;
+    margin: 5px 0px;
+}
+
+.coach-list-inner-page {
+    max-width: 620px;
+    margin: 0 auto;
+}
+.coach-list-odd {
+    background-color: #e8eaef;
+}
+
+.coach-list-even {
+    background-color: #ffffff;
+}
+
+.list-box-header {
+    font-weight: bold;
+}
+
+.list-box-name {
+    width: 150px;
+    line-height:28px;
+    padding:2px;
+    font-size:14px;
+}
+
+.list-box-email {
+    width: 250px;
+    line-height:28px;
+    padding:2px;
+    font-size:14px;
+}
+
+.list-box-action-header {
+    width: 100px;
+    text-align: center;
+    line-height:28px;
+    padding:2px;
+    font-size:14px;
+}
+
+.list-box-action {
+    width: 50px;
+    text-align: center;
+    line-height:28px;
+    padding:2px;
+    font-size:14px;
+}
+
+.buttons-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+.input-group-addon-fixed {
+    width:155px;
+
+}
+
+.form-group-fixed {
+    margin:10px;
+}
+
+
+/* coach admin classes */
+.coach-referral-value {
+    border: 1px solid black;
+    font-size: 14px;
+    width: 390px;
+    height: auto;
+    padding: 7px;
+    border-radius: 5px;
+    float: left;
+}
+
+.coach-referral-input {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 370px;
+}
+
+.coach-copy-btn {
+    float: left;
+    margin-left: 10px;
+}
+
+.copied::after {
+    position: absolute;
+    top: 55%;
+    right: 25%;
+    display: block;
+    content: "copied";
+    font-size: 0.75em;
+    padding: 2px 3px;
+    color: #fff;
+    background-color: #22a;
+    border-radius: 3px;
+    opacity: 0;
+    will-change: opacity, transform;
+    animation: showcopied 1.5s ease;
+}
+
+@keyframes showcopied {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.coach-info-text {
+    float: left;
+    width: 300px;
+}
+
+.coach-info-box {
+    float: right;
+}
+
+
+.coach-values {
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.coach-values-per-month {
+    width: 90px;
+    height: 50px;
+    font-size: 12px;
+    display: block;
+    padding: 5px;
+    text-align: center;
+}
+
+.btn {
+    cursor: pointer;
+}

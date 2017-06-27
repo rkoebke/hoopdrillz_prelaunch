@@ -1,0 +1,159 @@
+<check if="{{ @SESSION.cid }}">
+    <true>
+        <div class="inner-size">
+
+            <div class="logo-container">
+                <div class="logo-central"></div>
+            </div>
+
+            <h2>{{@coach_header_text}}</h2>
+
+            <div class="page-subheader-text">{{@coach_welcome_back}}</div>
+            <div class="page-subheader-text">{{@coach.name}}, {{@coach.surname}}</div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    {{@coach_referral_code}}
+                    <br>
+                    <div class="coach-referral-value">
+                        <input class="coach-referral-input" type="text" id="referralid" value="{{@appURL}}{{@coach.referral_id}}" readonly>
+                    </div>
+                    <div class="coach-copy-btn">
+                        <button class="btn btn-outline-info" data-copytarget="#referralid"><i class="fa fa-copy" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <div class="coach-info-text">{{@coach_referral_registered}}</div>
+
+                    <div class="coach-values coach-info-box">
+                        {{@userstocoach}}
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <div class="coach-info-text">{{@coach_revenue}}</div>
+                    <div class="coach-values coach-info-box">
+                        {{@totalrevenue}} {{@revenue_currency}}
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">{{@coach_per_month_subscribers}}</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {{@month_january_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.0}}</div>
+                        <div>{{@permonthrevenue.0}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_feburary_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.1}}</div>
+                        <div>{{@permonthrevenue.1}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_march_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.2}}</div>
+                        <div>{{@permonthrevenue.2}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_april_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.3}}</div>
+                        <div>{{@permonthrevenue.3}}</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    {{@month_may_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.4}}</div>
+                        <div>{{@permonthrevenue.4}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_june_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.5}}</div>
+                        <div>{{@permonthrevenue.5}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_july_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.6}}</div>
+                        <div>{{@permonthrevenue.6}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_august_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.7}}</div>
+                        <div>{{@permonthrevenue.7}}</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    {{@month_september_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.8}}</div>
+                        <div>{{@permonthrevenue.8}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_october_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.9}}</div>
+                        <div>{{@permonthrevenue.9}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_november_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.10}}</div>
+                        <div>{{@permonthrevenue.10}}</div>
+                    </div>
+                </div>
+                <div class="col">
+                    {{@month_december_short}}
+                    <div class="coach-values coach-values-per-month">
+                        <div>{{@permonthsubscribers.11}}</div>
+                        <div>{{@permonthrevenue.11}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row col-center">
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-danger" role="button" href="{{@BASE}}/coach/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>{{@coach_logout_btn}}</a>
+                </div>
+            </div>
+        </div>
+    </true>
+</check>

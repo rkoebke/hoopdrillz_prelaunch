@@ -1,0 +1,27 @@
+<check if="{{ @SESSION.cid }}">
+    <false>
+
+        <include href="{{ 'error.html' }}" />
+
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
+
+        <div class="header-text">{{@user_login_header_text}}</div>
+        <hr>
+
+        <form action="{{@BASE}}{{@user_default_auth_route}}" method="post">
+            <div class="form-group row">
+                <input type="text" name="email" class="form-control" placeholder="{{@user_login_email_placeholder}}">
+            </div>
+            <div class="form-group row">
+                <input type="password" name="password" class="form-control" placeholder="{{@user_login_password_placeholder}}">
+            </div>
+            <div class="buttons-container">
+                <button class="btn btn-outline-primary fixed-size-button" type="submit">{{@user_login_btn_login}}</button>
+                <a class="btn btn-outline-danger fixed-size-button" href="{{@BASE}}/">{{@user_login_btn_return}}</a>
+            </div>
+        </form>
+
+    </false>
+</check>

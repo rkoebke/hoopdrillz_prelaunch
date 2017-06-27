@@ -1,0 +1,30 @@
+<div class="logo-container">
+    <div class="logo"></div>
+    <div class="landing-page-coach-btn">
+        <a href="{{@BASE}}{{@url_coach}}" class="btn btn-sm btn-outline-primary">{{@landing_btn_coach_text}}</a>
+    </div>
+</div>
+
+<div class="landing-container">
+    <include href="{{ 'error.html' }}" />
+    <div class="row">
+        <p class="landing-page-text">{{@landing_text}}</p>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <form action="{{@url_subscribe_coach}}" method="post">
+                <div class="form-group row">
+                    <div class="col">
+                        <input type="text" id="email" name="email" class="landing-page-email-input" placeholder="{{@landing_input_email_placeholder}}">
+                        <input type="hidden" id="url" name="url" value="{{@currenturl}}">
+                        <input type="hidden" id="coachid" name="coachid" value="{{@coachid}}">
+                        <button type="submit" class="btn btn-outline-primary">{{@btn_subscribe_follow_coach}}</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>

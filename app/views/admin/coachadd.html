@@ -1,0 +1,43 @@
+<check if="{{ @SESSION.cid }}">
+    <true>
+        <div class="inner-size">
+
+            <include href="{{ 'error.html' }}" />
+
+            <div class="logo-container">
+                <div class="logo-central"></div>
+            </div>
+
+            <h2>{{@admin_coach_add_header}}</h2>
+            <hr>
+
+            <form action="{{@BASE}}{{@admin_coach_add_url_save}}" method="post">
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Name</div>
+                    <input type="text" name="name" class="form-control">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Surname</div>
+                    <input type="text" name="surname" class="form-control">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Email</div>
+                    <input type="text" name="email" class="form-control">
+                </div>
+
+                <div class="form-group row input-group mb-2 mr-sm-2 mb-sm-0 form-group-fixed">
+                    <div class="input-group-addon input-group-addon-fixed">Password</div>
+                    <input type="text" name="password" class="form-control" value="{{@randPassword}}" readonly>
+                </div>
+
+                <div class="buttons-container">
+                    <button class="btn btn-outline-success fixed-size-button-md" type="submit">{{@admin_coach_add_btn_submit}}</button>
+                    <a class="btn btn-outline-danger fixed-size-button-md" href="{{@BASE}}{{@admin_loggedin_route_coach_tools}}">{{@admin_coach_add_btn_return}}</a>
+                </div>
+            </form>
+
+        </div>
+    </true>
+</check>

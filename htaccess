@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule .* index.php [L,QSA]
+
+<Files "app.ini">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "routes.ini">
+Order Allow,Deny
+Deny from all
+</Files>

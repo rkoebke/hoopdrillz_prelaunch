@@ -1,0 +1,60 @@
+<check if="{{ @SESSION.cid }}">
+    <true>
+        <div class="inner-size">
+
+            <include href="{{ 'error.html' }}" />
+
+            <div class="logo-container">
+                <div class="logo-central"></div>
+            </div>
+
+            <h2>{{@admin_email_list_header}}</h2>
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">Total coach emails</div>
+                    <div class="admin-info-box">{{@total_coach_email.mcount}}</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">Total user emails</div>
+                    <div class="admin-info-box">{{@total_users_email.mcount}}</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="admin-info-text">Total follower emails</div>
+                    <div class="admin-info-box">{{@total_followers_email.mcount}}</div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            {{@test}}
+
+            <div class="row col-center">
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-primary" href="{{@BASE}}{{@admin_loggedin_url_export_coach}}">{{@admin_loggedin_btn_export_coach_text}}</a>
+                </div>
+
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-primary" href="{{@BASE}}{{@admin_loggedin_url_export_user}}">{{@admin_loggedin_btn_export_user_text}}</a>
+                </div>
+
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-primary" href="{{@BASE}}{{@admin_loggedin_url_export_follower}}">{{@admin_loggedin_btn_export_follower_text}}</a>
+                </div>
+
+                <div class="col">
+                    <a class="btn btn-sm btn-outline-danger" href="{{@BASE}}{{@admin_default_route}}">{{@admin_loggedin_btn_return_text}}</a>
+                </div>
+            </div>
+
+        </div>
+    </true>
+</check>

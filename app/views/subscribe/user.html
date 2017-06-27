@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="logo col-md-4"></div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <!--<a href="{{@BASE}}{{@url_coach}}" class="btn2 btn2-sm btn2-outline-primary">{{@landing_btn_coach_text}}</a>
+        <a href="{{@BASE}}{{@url_about}}" class="btn btn-sm btn-outline-primary">{{@landing_btn_about_text}}</a>-->
+    </div>
+</div>
+
+<div class="landing-container">
+    <include href="{{ 'error.html' }}" />
+    <div class="row">
+            <div style="font-size:48px; color:#cde3f6; margin:100px auto -10px auto; font-weight:bold; width:80%;">BASKETBALL TRAINING ON DEMAND</div>
+        <div class="landing-page-text" style="padding:0px 0px 20px 0px;margin:0 auto;margin-top:10px;width:80%; align:left;font-size:23px; color:#9eb9d0; line-height: 30px; justify-content: center;">{{@landing_text}}</div>
+        <div style="font-size:18px; color:#fff; margin:50px auto auto auto; width:80%;">GET EARLY ACCESS</div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <form action="{{@url_subscribe_user}}" method="post">
+                <div class="form-group row">
+                    <div class="col">
+                        <input type="text" id="email" name="email" class="landing-page-email-input" placeholder="{{@landing_input_email_placeholder}}">
+                        <input type="hidden" id="url" name="url" value="{{@currenturl}}">
+                        <input type="hidden" id="userid" name="userid" value="{{@userid}}">
+                        <button type="submit" class="btn btn-outline-primary">{{@btn_subscribe_follow_user}}</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+<div style="margin:auto; width:100%; color:#65829f; position:relative; bottom: 0; height: 40px; margin-top: 15px; font-size:12px;">Copyright &copy;2017 - HoopDrillz</div>

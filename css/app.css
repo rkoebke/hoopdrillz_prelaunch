@@ -1,0 +1,226 @@
+@import url("app-error.css");
+/*
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
+
+html,
+body {
+    /*font-family: Roboto, Trebuchet, Verdana, Helvetica, Arial, sans-serif;*/
+	font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+	background-image:url(assets/dunk_remix.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	background-attachment:fixed;
+	
+}
+
+.container {
+    padding:20px;
+	text-align: center;
+    align-items: center;
+    justify-content: center;
+	width:100%;
+}
+
+.container-fluid {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    height:106px;
+    width: 256px;
+}
+
+.logo {
+    background: url('assets/logo_signup.png') no-repeat center;
+    height:106px;
+}
+
+.logo-central {
+    background: url('assets/logo_signup.png') no-repeat center;
+    width: 256px;
+    height: 106px;
+    margin: 0 auto;
+}
+
+.float-break{
+    clear:both;
+}
+
+.footer-col {
+    clear:both;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    text-align: center;
+}
+
+.fa {
+color:#cde3f6;
+margin-top:30px;
+}
+
+.fa:hover {
+color:#fff;
+}
+
+.footer-col-logo {
+	color:#dfca9d;
+    display: inline-block;
+    margin:5px;
+}
+
+.landing-container {
+    width: 80%px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-page-coach-btn {
+    float:right;
+}
+
+.landing-page-text {
+    text-align:center;
+    width:100%;
+    margin:0 100px 0 0px;
+}
+
+.landing-page-email-input {
+	width:300px;
+	opacity: 0.8;
+	margin-top:15px;
+    border-radius:5px;padding:13px 15px 14px 15px;
+	border:none;
+}
+
+.mini-disclaimer-check {
+    margin: 0px 10px 0px 0px;
+    line-height: 14px;
+}
+
+.mini-disclaimer {
+    font-size: 14px;
+    color: gray;
+    line-height: 14px;
+}
+
+.user-rank-position {
+	background-color:#dfca9d;
+    border:none;
+	color: #0e314d;
+	font-weight:bold;
+    width:400px;
+	padding:15px;
+    margin:20px auto;
+    border-radius:5px;
+    webkit-box-shadow: 0px 3px 78px 8px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 3px 78px 8px rgba(0,0,0,0.38);
+    box-shadow: 0px 3px 78px 8px rgba(0,0,0,0.38);
+}
+
+.btn2-outline-primary {
+	color: #9bb5cd;
+    background-image: none;
+    background-color:none;
+	border-radius:5px;
+	font-weight:bold;
+	text-decoration:none;
+	border:1px solid transparent;
+}
+.btn2-outline-primary:hover {
+	color:#3d5873;
+	background-color:#9bb5cd;
+	border:1px solid transparent;
+	text-decoration:none;
+}
+
+.btn2 {
+	cursor: pointer;
+	display: inline-block;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 15px;
+    font-size: 1rem;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+	}
+
+.btn-outline-primary {
+	color: #0e314d;
+    background-image: none;
+    background-color:#dfca9d;
+	border-radius:5px;
+	font-weight:bold;
+}
+.btn-outline-primary:hover {
+	color:#0e314d;
+	background-color:#fff;
+	border:1px solid transparent;
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-block;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 15px;
+    font-size: 1rem;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+	}
+	
+.form-group {margin-bottom:0px;}

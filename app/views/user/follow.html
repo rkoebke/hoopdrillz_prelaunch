@@ -1,0 +1,35 @@
+<check if="{{ @SESSION.cid }}">
+    <false>
+
+        <include href="{{ 'error.html' }}" />
+
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
+
+        <div class="header-text">{{@follow_heads_up_text}}</div>
+        <hr>
+
+        <form action="{{@BASE}}{{@follow_register_route}}" method="post">
+
+            <div class="form-group row">
+                <input type="text" name="referral" class="form-control" placeholder="{{@follow_user_referral_link}}">
+            </div>
+            <div class="form-group row">
+                <input type="text" name="email" class="form-control" placeholder="{{@follow_email}}">
+            </div>
+
+            <div class="row">
+                <input class="mini-disclaimer-check" type="checkbox" id="iacceptdisclaimer">
+
+                <p class="mini-disclaimer">{{@follow_disclaimer}}</p>
+            </div>
+
+            <div class="buttons-container">
+                <button id="disabledbtn" class="btn btn-outline-primary fixed-size-button" disabled>{{@follow_submit_button}}</button>
+                <a class="btn btn-outline-danger fixed-size-button" href="{{@BASE}}/">{{@follow_return_button}}</a>
+            </div>
+        </form>
+
+    </false>
+</check>

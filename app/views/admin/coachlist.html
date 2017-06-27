@@ -1,0 +1,58 @@
+<check if="{{ @SESSION.cid }}">
+    <true>
+        <div class="coach-list-inner-page">
+
+            <include href="{{ 'error.html' }}" />
+
+            <div class="logo-container">
+                <div class="logo-central"></div>
+            </div>
+
+            <h2>{{@admin_list_coach_header_text}}</h2>
+            <hr>
+
+            <div>
+                <div class="row">
+                    <div class="list-box-name list-box-header">{{ @admin_list_coach_pst_name }}</div>
+                    <div class="list-box-name list-box-header">{{ @admin_list_coach_pst_surname }}</div>
+                    <div class="list-box-email list-box-header">{{ @admin_list_coach_pst_email }}</div>
+                    <div class="list-box-action-header list-box-header">{{ @admin_list_coach_pst_action }}</div>
+                </div>
+
+                <repeat group="{{ @coaches }}" value="{{ @coach }}" counter="{{ @ctr }}">
+                    <div class="row">
+                        <div class="list-box-name {{ @ctr%2?'coach-list-odd':'coach-list-even' }}">{{ @coach.name }}</div>
+                        <div class="list-box-name {{ @ctr%2?'coach-list-odd':'coach-list-even' }}">{{ @coach.surname }}</div>
+                        <div class="list-box-email {{ @ctr%2?'coach-list-odd':'coach-list-even' }}">{{ @coach.email }}</div>
+                        <div class="list-box-action {{ @ctr%2?'coach-list-odd':'coach-list-even' }}">
+                            <a href="{{@BASE}}{{@admin_list_coach_edit_route}}{{@coach.id}}" title="{{@admin_list_coach_btn_edit}}" class="btn btn-sm btn-outline-primary"><i class="fa fa-edit"></i></a>
+                        </div>
+                        <check if="{{ @coach.enabled == 'Y' }}">
+                            <true>
+                                <div class="list-box-action {{ @ctr%2?'coach-list-odd':'coach-list-even' }}">
+                                    <a href="{{@BASE}}{{@admin_list_coach_disable_route}}{{@coach.id}}" title="{{@admin_list_coach_btn_disable}}" class="btn btn-sm btn-outline-danger"><i class="fa fa-user-o"></i></a>
+                                </div>
+                            </true>
+                            <false>
+                                <div class="list-box-action {{ @ctr%2?'coach-list-odd':'coach-list-even' }}">
+                                    <a href="{{@BASE}}{{@admin_list_coach_enable_route}}{{@coach.id}}" title="{{@admin_list_coach_btn_enable}}" class="btn btn-sm btn-outline-success"><i class="fa fa-user-o"></i></a>
+                                </div>
+                            </false>
+                        </check>
+                    </div>
+                </repeat>
+            </div>
+            <br>
+
+            <div class="row col-center">
+                <div class="col">
+                    <a class="btn btn-outline-primary fixed-size-button" href="{{@BASE}}{{@admin_loggedin_route_add_coach}}">{{@admin_loggedin_btn_add_coach}}</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-outline-danger fixed-size-button" href="{{@BASE}}{{@admin_default_route}}">{{@admin_list_coach_btn_return}}</a>
+                </div>
+            </div>
+
+        </div>
+    </true>
+</check>
